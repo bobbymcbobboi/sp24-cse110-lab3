@@ -1,0 +1,123 @@
+:root {
+  --main-bg-color: #b3b3b3;
+}
+body {
+  position: static;
+  background-color: var(--main-bg-color, white);
+}
+
+h1 {
+  color: rgb(255, 0, 0);
+  font-size: 50px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  width: 50vw;
+  max-width: 500px;
+  min-width: 100px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  color: #00ff00;
+  font-size: 5mm;
+  margin: 5px 5px 5px 0;
+  padding: 5px 5px 5px 0;
+  height: 50px;
+}
+
+h3 {
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
+  border-radius: 5px;
+  padding-left: 3px;
+  color: hsl(240, 100%, 50%);
+  font-size: 0.3in;
+  margin: auto;
+  text-align: center;
+}
+
+li.LydiaName {
+  color: violet;
+}
+
+.BobName + li {
+  color: indigo;
+}
+
+i ~ em {
+  color: wheat;
+}
+
+i {
+  color: brown;
+  text-decoration: lime underline;
+  font-size: 1.5rem;
+}
+
+b, em {
+  color: color(display-p3 1 0.5 0);
+}
+
+strong {
+  color: color-mix(in lch, plum, pink);
+}
+
+.BobName {
+  font-size: 1.5vw;
+}
+
+.Attendance {
+  & .LydiaName {
+    font-size: 20px;
+  }
+}
+
+.Attendance .JackName {
+  font-size: 1.5em;
+}
+
+.Attendance > .MatthewName {
+  display: none;
+}
+
+#AuthorText {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#AuthorText:hover {
+  color: pink;
+}
+
+button:active {
+  background-color: aqua;
+}
+
+*.Schedule {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Attendance {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  row-gap: 5px;
+  border: 1px solid #fff
+}
+
+[type] {
+  color: green;
+}
+
+@media only screen and (max-width: 768px) {
+  .Attendance {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 500px;
+  }
+}
